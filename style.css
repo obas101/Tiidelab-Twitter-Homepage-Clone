@@ -3,26 +3,105 @@
     font-family: helvetica;
 }
 
-.column {
-    float: left;
-    width: 50%;
-    height: 586px;
+
+body {
+    margin: 0;
+    padding: 0;
 }
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
+/** mobile**/
+
+.row {
+    display: flex;
+    flex-direction: column-reverse;
     }
-#div1 {
+
+.column {
+    width: 100%;
+    height: 63vh ;
+    }
+
+
+    #div1 {
     background-color: #00acee;
-    background-image: url(images/twitterBird.png);
+    background-image: url(twitterBird.png);
     background-repeat: no-repeat;
     background-size: 150%;
     background-position: 20px;    
+    height: auto;
 }
+
+
+#div1 h6 {
+color: white;
+font-size: 1.35rem;
+display: inline;
+}
+
+.fa-search {
+    display: inline;
+    color: white;
+    margin: 0 0 4vmin 0;
+    font-size: 2rem;
+    margin-right: 2rem;
+
+}
+
+.fa-user-friends {
+    display: inline;
+    color: white;
+    margin: 0 0 4vmin 0;
+    font-size: 2rem;
+    margin-right: 1.45rem;
+    margin-top: 2rem;
+}
+
+
+.fa-comment {
+    color: white;
+    font-size: 1rem;
+    display: inline;
+    margin: 0 0 4vmin 0;
+    font-size: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    }
+
+.MainLeftInfo {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 50px;
+    }
+.leftInfo {
+        color: white;
+        font-weight: bold;
+        font-size: 23px;
+        margin-top: 20px;
+    }
+
 #div2 {
     background-color: #10171e;
+    width:100%;
+    
     }
+.mainRightInfo {
+    position: relative;
+    top: 3vh;
+    margin: 0 auto;
+    height: auto;
+    width: 93%;
+}
+.rightInfo h3 {
+    margin-bottom: 10vh;
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: white;
+}
+#abc {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
 
 #button1 {
     float: right;
@@ -38,17 +117,6 @@
 
 }
 
-.MainLeftInfo {
-    margin: auto;
-    width: 65%;
-    }
-
-.leftInfo {
-    color: white;
-    font-weight: bold;
-    font-size: 23px;
-}
-
 .button2 {
     background: #00acee;
     color: white;
@@ -57,6 +125,7 @@
     border-radius: 20px;
     height: 40px;
     border: none;
+    margin-bottom: 3vmin;
     outline: none;
     font-weight:bold;
     font-size: 20px;
@@ -74,28 +143,16 @@
 
 }
 
-.rightInfo {
-    color: white;
-    font-weight: bold;
-    font-size: 25px;
-    margin: auto;
-    width: 65%;
-}
-.footer {
-    width: 100%;
-    height: 70px;
-    background-color:#10171e;
-    color: grey;
-}
 #bird {
     width: 60px;
 }
 .footer {
+    width: 100%;
+    background: #10171e;
     margin: auto;
     text-align: center;
     color: grey;
-    align-self: center
-    ;
+    align-self: center;
 }
 a:link {
     color: grey;
@@ -114,3 +171,140 @@ li {
     padding: 8px;
     align-self: center;
     list-style-type: none;}
+
+
+@media only screen and (min-width: 700px) {
+    .row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        }
+
+    .column {
+        width: 50%;
+        height: 90vh;
+        }
+    
+    #div1 {
+        background-color: #00acee;
+        background-image: url(twitterBird.png);
+        background-repeat: no-repeat;
+        background-size: 150%;
+        background-position: 20px;
+    }
+  
+    
+    #div2 {
+        background-color: #10171e;
+        width: 50%;
+        }
+.MainLeftInfo {
+    position: relative;
+    margin: auto;
+    margin-top: 11rem;
+    margin-left: 7rem;
+}
+    
+.mainRightInfo {
+    position: relative;
+    top: 15vh;
+    width:66%;
+    left: vh;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    #button1 {
+        float: right;
+        background-color: #10171e; 
+        border-color: #00acee; 
+        color: #00acee;
+        border-radius: 30px;
+        height: 50px;
+        font-weight: bold;
+        font-size: 15px;
+        margin: 10px;
+        width: 75px;
+    
+    }
+    
+    .button2 {
+        background: #00acee;
+        color: white;
+        width: 100%;
+        border-color: #00acee;
+        border-radius: 20px;
+        height: 40px;
+        margin-bottom: 2vh;
+        border: none;
+        outline: none;
+        font-weight:bold;
+        font-size: 20px;
+    }
+    .button3 {
+        background: #10171e;
+        color: #00acee;
+        width: 100%;
+        border-color: #00acee;
+        border-radius: 20px;
+        height: 40px;
+        outline: none;
+        font-weight: bold;
+        font-size: 20px;
+    
+    }
+
+    .rightInfo {
+        color: white;
+        font-weight: bold;
+        font-size: 25px;
+        width: 100%
+    }
+    
+    #bird {
+        width: 60px;
+    }
+    .footer {
+        width: 100%;
+        background: #10171e;
+        margin: auto;
+        height: 10vh;
+        text-align: center;
+        color: grey;
+        align-self: center;
+        border-color: black;
+    }
+    a:link {
+        color: grey;
+        text-decoration: none;
+    }
+    a:visited {
+        color: grey;
+    }
+    
+    #last {
+    text-decoration: none;
+    list-style-type: none;
+    width: 95%;
+    margin: 0 auto;
+    }
+
+    .cc {
+        
+        padding: 8px;
+        font-size: 0.9rem;
+        display: inline;
+    }
+
+    li {
+        padding: 8px;
+        font-size: 0.9rem;
+        list-style-type: none;}  
+}
+
+
+
+
+
+
